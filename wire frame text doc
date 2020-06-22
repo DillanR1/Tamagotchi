@@ -5,8 +5,33 @@ Initial Wire Frame
 
 (Wire frame will be updated as project continues)
 
+// The player will select "start game!" and the timer will begin.
+Once the timer begins, the pet will begin to age, express sleepiness, boredom, and hunger. These will be referred to as pet functions.
+
+    // Pet functions will be set at an interval to occur. The player must tend to the pet functions as they occur.
+    // For now, selecting the wrong pet function, (or selecting no function at all) will increase the corresponding value by 1.
+    // should one of the pet functions reach 10/10, the pet will die. 
+
+// The player will select buttons to allow the pet to eat, sleep and play in order to keep the pet from dying.
+
+
+
+// Timer drives majority of the pet functionality and interaction in the game. Should be main focus for now.
+
+// The game will be built statically in HTML and styles in CSS first before JavaScript major functionality is added
+// In HTML the start button needs to be a footer
+// "eat", "sleep" and "play" buttons need to be added slightly above the start button on the footer.
+// Footer needs border, background, and styling as well as positioning
+/
+
+
+
+
 // create separate repo for project
 // create read.me file
+// add to readme.file
+    Instruct player how to play, what the game does and any other functions in the game
+
 // include app.js, index.html, and css files.
 // Instructions
 // Create object class
@@ -14,6 +39,8 @@ Initial Wire Frame
 // comment out code that Isn't working as intended. reference along the way
 // Display Character of choice for pet.
 // Pet Metrics: Hunger(1-10); Sleepiness(1-10); Boredom(1-10)
+    // create functions using this to increase or reduce sleepiness, boredom and hunger.
+
 // create a function that increases pet age every x minutes.
 // assign age to pet
 
@@ -24,3 +51,4 @@ Initial Wire Frame
 
 // Pet will morph at certain ages
 // Animate pet across the screen while it's alive.
+
