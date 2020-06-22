@@ -1,0 +1,26 @@
+
+
+
+Initial Wire Frame
+
+(Wire frame will be updated as project continues)
+
+// create separate repo for project
+// create read.me file
+// include app.js, index.html, and css files.
+// Instructions
+// Create object class
+// begin to fill out object
+// comment out code that Isn't working as intended. reference along the way
+// Display Character of choice for pet.
+// Pet Metrics: Hunger(1-10); Sleepiness(1-10); Boredom(1-10)
+// create a function that increases pet age every x minutes.
+// assign age to pet
+
+// add ability to name pet
+// add buttons to feed pet, turn off lights and play with pet.
+// Increase pet's hunger, sleepiness, and boredom in intervals of your choosing
+// Pet should die if Hunger, Boredom, Sleepiness hits 10/
+
+// Pet will morph at certain ages
+// Animate pet across the screen while it's alive.
