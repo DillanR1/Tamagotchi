@@ -72,6 +72,8 @@ Once the timer begins, the pet will begin to age, express sleepiness, boredom, a
 // button class ID 
 // Javascript Event Listeners for button clicks
 // Alert! for when pet is hungry, sleepy, or bored
+// Alert! for when pet sleeps, eats and plays.
+
 // Background in css
 // Tomagatchi character CSS
 // Figure out how to animate pet
