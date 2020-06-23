@@ -1,7 +1,7 @@
 
 
 class Tamagotchi
-    constructor(name, age = 0, hunger = 0,sleepiness = 0,boredom = 0){
+    constructor (name, age = 0, hunger = 0,sleepiness = 0,boredom = 0);{
         this.name = name;
         this.age = age;
         this.hunger = hunger;
@@ -10,10 +10,11 @@ class Tamagotchi
     }
 
 
+
     const startButton = document.getElementById('startGame');
 
     startButton.addEventListener('click', handleStartGame);
-    
+
     /* create function for timer
     function handleStartGame () {
         console.log('Start Game clicked!')
@@ -26,3 +27,4 @@ class Tamagotchi
     }
 
     */
+
