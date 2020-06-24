@@ -4,22 +4,62 @@ class Tamagotchi {
     constructor  (name) {
         this.name = name;
         this.age = 0; 
-        this.hunger =0; 
+        this.hunger = 0; 
         this.sleepiness = 0;
         this.boredom = 0;
   
+     startButton = document.getElementById
+        ('startGame');
+
+     startButton.addEventListener('click',
+     handleStartGame);   
+
+
+
+
+
+
+
+
+
+
+    
+    function handleStartGame() {
+        console.log('Game is Running!');
+
+      startTimer()
     }
-     hungerTimer = function(){
+
+
+    hungerTimer = function(){
         const timer = setInterval(function () {
             if (time > 0){
                 time--;
-                console.log(time);   //inside of set interval function, add interval
-                                     // google set interval syntax.
-            }
-        })
-
+                console.log(time);  
+                } else {
+                console.log("Timer Reset");
+           }    clearInterval(timer);    
+        
+        }, 5000);
+        
     }
 };
+   /*  sleepinessTimer = function(){
+        const timer = setInterval(function () {
+            if (time > 0){
+                time--;
+                console.log(time);
+};
+
+    
+    
+
+
+     boredomTimer = function(){
+        const timer = setInterval(function () {
+            if (time > 0){
+                time--;
+                console.log(time);
 
 
 
@@ -30,18 +70,11 @@ class Tamagotchi {
 
 
 
-
-
-
-
-const tamagotchi1 = new Tamagotchi ("D")
-
-const tamagotchi2 = new Tamagotchi ("Yulia",0,0,0,0)
 
 // give constructor function default values 
 //create functions inside of class but OUTSIDE of constructor
 
-
+*/
 
 /*
 
@@ -59,7 +92,7 @@ const timer = setInterval(function ()
     if(time = 0) {hunger || (math.random <= .50); 
         hunger++}
         console.log(hunger); 
-*/
+
         
     //const startButton = document.getElementById('startGame');
 
@@ -73,7 +106,4 @@ const timer = setInterval(function ()
     
 
 
-     /*create function for timer
-        function handleStartGame () {
-            console.log('Start Game clicked!')
-                */
+    
