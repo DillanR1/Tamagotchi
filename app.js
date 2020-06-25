@@ -1,4 +1,4 @@
-
+console.log("Hello!!!");
 
 class Tamagotchi {
     constructor  (name) {
@@ -7,45 +7,27 @@ class Tamagotchi {
         this.hunger = 0; 
         this.sleepiness = 0;
         this.boredom = 0;
-  
-      startButton = document.getElementById
-        ('startGame');
-
-     startButton.addEventListener('click',
-     handleStartGame);   
+        this.time = 0;
+    };
+       
 
         // TODO ADD EVENT LISTENER FOR INTERACTIVE BUTTONS
         // TODO ADD INTERACTIVE BUTTONS
         // EVENT LISTENER WILL DECRIMENT
 
-
-    
-    function handleStartGame() {
-        console.log('Game is Running!');
-
-      startHungerTimer()
-      //startSleepinessTimer()   
-      //startBoredomTimer()
-      //startAgeInterval()
-    }
-
-
-    startHungerTimer = function(){
+    startHungerTimer(){ 
         const timer = setInterval(function () {
-            if (time > 0){
-                time--;
-                console.log(time);  
+            if (this.time > 0){
+                this.time--;
+                console.log(this.time);  
                 } else {
                 console.log('Hunger Timer Reset');
-           }    clearInterval(timer);    
-        
-        }, 5000);
+                clearInterval(timer);    
+                }    
+            }, 5000);
         
     }
-}
- 
-
-/*  sleepinessTimer = function(){
+    sleepinessTimer = function(){
         const timer = setInterval(function () {
             if (time > 0){
                 time--;
@@ -55,11 +37,7 @@ class Tamagotchi {
            }    clearInterval(timer);
         }, 9000);   
     }    
-
-};
-
-    
-     boredomTimer = function(){
+    boredomTimer = function(){
         const timer = setInterval(function () {
             if (time > 0){
                 time--;
@@ -72,10 +50,50 @@ class Tamagotchi {
 
 };
 
-startAgeInterval
+    startAgeInterval = function(){
+        if (time > 0){
+            time --;
+            console.log(time);
+            this.age++;
+            } else {
+    }       console.log();
+
+};
+ 
+    
+
+    handleStartGame() {
+        console.log('Game is Running');
+
+      this.startHungerTimer();
+      this.startSleepinessTimer();   
+      this.startBoredomTimer();
+      this.startAgeInterval();
+    }
+
+
+   
+};
+ 
 
 
 
+    
+    
+
+
+ 
+    
+let pet = new Tamagotchi('Pet')
+
+const startButton = document.getElementById
+('startGame');
+
+startButton.addEventListener('click',
+    function (){
+        pet.handleStartGame()
+    }
+);
 
 
 
@@ -85,7 +103,7 @@ startAgeInterval
 // give constructor function default values 
 //create functions inside of class but OUTSIDE of constructor
 
-*/
+
 
 /*
 
@@ -110,5 +128,4 @@ const timer = setInterval(function ()
     once start game is pushed. They will appear as an alert to the player every minute. 
     The alerts should be randomized. */ 
 
-
-
+    
