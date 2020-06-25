@@ -1,9 +1,7 @@
 
+//================================Wire Frame and player story====================================================================
 
-
-Initial Wire Frame
-
-(Wire frame will be updated as project continues)
+//-----------------------------------------Player Story----------------------------------------------------------------------
 
 // The player will select "start game!" and the timer will begin.
 Once the timer begins, the pet will begin to age, express sleepiness, boredom, and hunger. These will be referred to as pet functions.
@@ -14,6 +12,8 @@ Once the timer begins, the pet will begin to age, express sleepiness, boredom, a
 
 // The player will select buttons to allow the pet to eat, sleep and play in order to keep the pet from dying.
 
+
+//------------------------------------Wire Frame and Planning------------------------------------------------------//
 
 
 // Timer drives majority of the pet functionality and interaction in the game. Should be main focus for now.
@@ -27,10 +27,6 @@ Once the timer begins, the pet will begin to age, express sleepiness, boredom, a
     // When the timer stops, so will the game.
     // The timer will stop if the pet is dead.
     // Instead of timer, add functional clock that logs to the console how long player kept pet alive.
-
-
-
-
 
 // create separate repo for project
 // create read.me file
@@ -48,9 +44,6 @@ Once the timer begins, the pet will begin to age, express sleepiness, boredom, a
     // every x seconds 
     // if button is not clicked in x amount of time, decrement 1 from 10 in pet functions.
 
-
-
-
 // create a function that increases pet age every x minutes.
 // assign age to pet
 
@@ -63,9 +56,6 @@ Once the timer begins, the pet will begin to age, express sleepiness, boredom, a
 // We can increment the age every x minutes 
 //   ----or---- we can increment the age as a function of sleep
                 age++ or age +1 
-
-
-
 
 // Animate pet across the screen while it's alive.
 
