@@ -10,79 +10,40 @@ class Tamagotchi {
         this.time = 0;
     };
        
-
-        // TODO ADD EVENT LISTENER FOR INTERACTIVE BUTTONS
-        // TODO ADD INTERACTIVE BUTTONS
-        // EVENT LISTENER WILL DECRIMENT
-
-    startHungerTimer(){ 
-        const timer = setInterval(function () {
-            if (this.time > 0){
-                this.time--;
-                console.log(this.time);  
-                } else {
-                console.log('Hunger Timer Reset');
-                clearInterval(timer);    
-                }    
-            }, 5000);
-        
-    }
-    sleepinessTimer = function(){
-        const timer = setInterval(function () {
-            if (time > 0){
-                time--;
-                console.log(time);
-                } else {  
-                console.log('Sleepiness Timer Reset');    
-           }    clearInterval(timer);
-        }, 9000);   
-    }    
-    boredomTimer = function(){
-        const timer = setInterval(function () {
-            if (time > 0){
-                time--;
-                console.log(time);
-                } else {  
-                console.log('Boredom Timer Reset');    
-           }    clearInterval(timer);
-        }, 15000);   
+    handlePetNeeds() {
+        this.hunger
+        this.sleepiness
+        this.boredom  
+      };
+      
+    startAgeInterval() {
+            this.age++
+            console.log('age: ', this.age); 
+    };
+    hungerTimer() { 
+                this.hunger++;
+                console.log('hunger: ', this.hunger);     
+    };
+    sleepinessTimer() {
+                this.sleepiness++;
+                console.log('sleepiness: ', this.sleepiness);    
+    };    
+    boredomTimer() {
+                this.boredom++
+                console.log('boredom: ', this.boredom);
     }    
 
 };
+    function handleStartGame(petInstance) { 
+     setInterval(function () {
+         
+        petInstance.hungerTimer()
+        petInstance.sleepinessTimer()   
+        petInstance.boredomTimer()
 
-    startAgeInterval = function(){
-        if (time > 0){
-            time --;
-            console.log(time);
-            this.age++;
-            } else {
-    }       console.log();
+        }, 1500);    
 
-};
- 
-    
-
-    handleStartGame() {
-        console.log('Game is Running');
-
-      this.startHungerTimer();
-      this.startSleepinessTimer();   
-      this.startBoredomTimer();
-      this.startAgeInterval();
-    }
-
-
-   
-};
- 
-
-
-
-    
-    
-
-
- 
+    };
     
 let pet = new Tamagotchi('Pet')
 
@@ -91,41 +52,36 @@ const startButton = document.getElementById
 
 startButton.addEventListener('click',
     function (){
-        pet.handleStartGame()
+        handleStartGame(pet)
     }
 );
 
 
+const feedButton = document.getElementById
+('feed');
 
-// OLD CODE TO START TIMER
+feedButton.addEventListener('click',
+    function (){
+        pet.handlePetNeeds()
+    }
+);
+
+const sleepButton = document.getElementById
+('sleep');
+
+sleepButton.addEventListener('click',
+    function (){
+        pet.handlePetNeeds()
+    }
+);
+
+const petPlayButton = document.getElementById
+('play');
+
+petPlayButton.addEventListener('click',
+    function (){
+        pet.handlePetNeeds()
+    }
+);
 
 
-// give constructor function default values 
-//create functions inside of class but OUTSIDE of constructor
-
-
-
-/*
-
-let time = 30;
-
-function hungerTimer(){
-    const timer = setInterval(function () {
-        if (time > 0) 
-            time--;
-            console.log(time);
-        }
-}
-const timer = setInterval(function () 
-        
-    if(time = 0) {hunger || (math.random <= .50); 
-        hunger++}
-        console.log(hunger); 
-
-
-
-    /* NOTE pet age, hunger, sleepiness, and boredom need functions to increment
-    once start game is pushed. They will appear as an alert to the player every minute. 
-    The alerts should be randomized. */ 
-
-    
