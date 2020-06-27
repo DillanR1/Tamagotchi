@@ -11,13 +11,17 @@ class Tamagotchi {
     };
        
     handlePetNeeds() {
-        this.hunger
-        this.sleepiness
-        this.boredom  
-      };
+        const feedButton = document.getElementById('feed') 
+        this.hunger--;
+       
+        const sleepButton = document.getElementById('sleep')
+        this.sleepiness--;
+       
+        const petPlayButton = document.getElementById('play')
+        this.boredom--;  
       
+    };  
     startAgeInterval() {
-        //setInterval(3000);
              this.age++
             console.log('age: ', this.age); 
     };
@@ -52,7 +56,11 @@ class Tamagotchi {
       }, 3500);
     };
     
-let pet = new Tamagotchi('Pet')
+let pet = new Tamagotchi('Pet')        // name pet here, DOM manipulation, textbox submit 
+
+
+
+
 
 const startButton = document.getElementById
 ('startGame');
@@ -65,6 +73,8 @@ startButton.addEventListener('click',
 );
 
 
+
+
 const feedButton = document.getElementById
 ('feed');
 
@@ -74,6 +84,8 @@ feedButton.addEventListener('click',
     }
 );
 
+
+
 const sleepButton = document.getElementById
 ('sleep');
 
@@ -82,6 +94,8 @@ sleepButton.addEventListener('click',
         pet.handlePetNeeds()
     }
 );
+
+
 
 const petPlayButton = document.getElementById
 ('play');
