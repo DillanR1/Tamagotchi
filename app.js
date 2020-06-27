@@ -17,7 +17,8 @@ class Tamagotchi {
       };
       
     startAgeInterval() {
-            this.age++
+        //setInterval(3000);
+             this.age++
             console.log('age: ', this.age); 
     };
     hungerTimer() { 
@@ -31,7 +32,7 @@ class Tamagotchi {
     boredomTimer() {
                 this.boredom++
                 console.log('boredom: ', this.boredom);
-    }    
+    };    
 
 };
     function handleStartGame(petInstance) { 
@@ -42,7 +43,13 @@ class Tamagotchi {
         petInstance.boredomTimer()
 
         }, 1500);    
+    };
 
+    function handleStartAgeInterval(petInstance) {
+      setInterval(function () {
+
+        petInstance.startAgeInterval()
+      }, 3500);
     };
     
 let pet = new Tamagotchi('Pet')
@@ -52,7 +59,8 @@ const startButton = document.getElementById
 
 startButton.addEventListener('click',
     function (){
-        handleStartGame(pet)
+        handleStartGame(pet);
+        handleStartAgeInterval(pet);
     }
 );
 
