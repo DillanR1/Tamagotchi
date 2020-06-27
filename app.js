@@ -10,17 +10,25 @@ class Tamagotchi {
         this.time = 0;
     };
        
-    handlePetNeeds() {
-        const feedButton = document.getElementById('feed') 
-        this.hunger--;
-       
-        const sleepButton = document.getElementById('sleep')
-        this.sleepiness--;
-       
-        const petPlayButton = document.getElementById('play')
-        this.boredom--;  
-      
-    };  
+    //Handle pet buttons NOTE
+    // TODO
+    // REVIEW 
+    
+    handleFeedPet() {
+    const feedButton = document.getElementById('feed') 
+    this.hunger--;
+    }
+
+    handleSleepButton() {
+    const sleepButton = document.getElementById('sleep')
+    this.sleepiness--;
+    }
+
+    handlePetPlayButton() {
+    const petPlayButton = document.getElementById('play')
+    this.boredom--;  
+    }
+
     startAgeInterval() {
              this.age++
             console.log('age: ', this.age); 
@@ -80,7 +88,7 @@ const feedButton = document.getElementById
 
 feedButton.addEventListener('click',
     function (){
-        pet.handlePetNeeds()
+        pet.handleFeedPet()
     }
 );
 
@@ -91,7 +99,7 @@ const sleepButton = document.getElementById
 
 sleepButton.addEventListener('click',
     function (){
-        pet.handlePetNeeds()
+        pet.handleSleepButton()
     }
 );
 
@@ -102,7 +110,7 @@ const petPlayButton = document.getElementById
 
 petPlayButton.addEventListener('click',
     function (){
-        pet.handlePetNeeds()
+        pet.handlePetPlayButton()
     }
 );
 
