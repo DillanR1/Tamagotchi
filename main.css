@@ -2,11 +2,8 @@ body {
     background-color: aqua;
 }
 
-.interactiveBtns {
-    margin-top: 95%;
-    border: 5px;
-    padding: 20px; 
-    margin: 0, auto;
+button.startGame{
+    width: 200vh;
 }
 
 

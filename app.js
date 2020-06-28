@@ -13,12 +13,20 @@ class Tamagotchi {
     //Handle pet buttons NOTE
     // TODO
     // REVIEW 
+// 16 - 24 adding html
+
     
+
+
+
+
+
+
     handleFeedPet() {
-    const feedButton = document.getElementById('feed') 
+    const feedButton = document.getElementById('feed'); 
     this.hunger--;
     }
-
+    
     handleSleepButton() {
     const sleepButton = document.getElementById('sleep')
     this.sleepiness--;
@@ -47,6 +55,7 @@ class Tamagotchi {
     };    
 
 };
+
     function handleStartGame(petInstance) { 
      setInterval(function () {
          
@@ -54,20 +63,25 @@ class Tamagotchi {
         petInstance.sleepinessTimer()   
         petInstance.boredomTimer()
 
-        }, 1500);    
+        }, 2500);    
     };
 
     function handleStartAgeInterval(petInstance) {
       setInterval(function () {
 
         petInstance.startAgeInterval()
-      }, 3500);
-    };
-    
-let pet = new Tamagotchi('Pet')        // name pet here, DOM manipulation, textbox submit 
+      }, 6000);
+};
+
+let petName = window.prompt('Name Your Pet!');
+const pet = new Tamagotchi(petName);
+console.log(petName);
+console.log(pet.age + " " + pet.boredom);
 
 
 
+
+// new div before event listener
 
 
 const startButton = document.getElementById
