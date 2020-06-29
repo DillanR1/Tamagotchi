@@ -1,9 +1,21 @@
-body {
+
+
+
+
+/*body {
     background-color: aqua;
 }
+*/
 
-button.startGame{
-    width: 200vh;
+.box{
+    background-image: url(/images/planet.jpg);
+}
+
+
+
+#startGame{
+    width: 50px;
+    height: 30px;
 }
 
 
