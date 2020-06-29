@@ -13,7 +13,7 @@ class Tamagotchi {
 showPetInfo() {
     const displayDiv = document.getElementById(`petInfo`);
     displayDiv.innerHTML = 
-    (`<p>Pet name: ${pet.name}</p>
+  (`<p>Pet name: ${pet.name}</p>
     <p>Pet Age: ${pet.age}</p>
     <p>Pet Hunger: ${pet.hunger}</p>
     <p>Pet Sleepiness: ${pet.sleepiness}</p>
@@ -60,7 +60,7 @@ showPetInfo() {
         sleepButton.disabled = true
         petPlayButton.disabled = true
     };
-
+               // NOT WORKING / NOT FINISHED YET
     morphPet() {
         (age === 3)
         (age === 6)
