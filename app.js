@@ -35,39 +35,67 @@ showPetInfo() {
     this.boredom--;  
     }
 
-    startAgeInterval() {
+    startAgeInterval() { 
+        if (this.hunger >= 11||this.sleepiness >= 11||this.boredom >= 11) {
+            clearInterval(handleStartAgeInterval, 0);
+            document.getElementById('startGame').disabled = true;
+            }else{
             this.age++;
             console.log('age: ', this.age); 
-    };
+        }
+    };    
     hungerTimer() { 
-            this.hunger++;
+        if (this.hunger >= 11) {
+            clearInterval(handleStartGame, 0);
+            document.getElementById('feed').disabled = true;
+            window.alert('Your pet died of starvation')
+            }else{this.hunger++;
             console.log('hunger: ', this.hunger);     
+    
+        }        
     };
     sleepinessTimer() {
+        if (this.sleepiness >= 11) {
+            clearInterval(handleStartGame, 0);
+            document.getElementById('sleep').disabled = true;
+            window.alert('Your pet died of exhaustion')
+            }else{
             this.sleepiness++;
-            console.log('sleepiness: ', this.sleepiness);    
+            console.log('sleepiness: ', this.sleepiness);
+        }    
     };    
     boredomTimer() {
+        if (this.boredom >= 11) {
+            clearInterval(handleStartGame, 0);
+            document.getElementById('play').disabled = true;
+            window.alert('Your pet ran away due to boredom');
+            }else{
             this.boredom++
             console.log('boredom: ', this.boredom);
+        }    
     };   
-    
-    killPet() {
-        (this.hunger > 10 || this.sleepiness > 10 || this.boredom > 10)
-        clearInterval(petInstance)
-        startButton.disabled = true
-        feedButton.disabled = true
-        sleepButton.disabled = true
-        petPlayButton.disabled = true
-    };
+   /* killPet() {
+        if (this.hunger > 10 || this.sleepiness > 10 || this.boredom > 10) {
+       document.getElementById('startGame').disabled = true;
+       document.getElementById('feed').disabled = true;
+       document.getElementById('sleep').disabled = true;
+       document.getElementById('play').disabled = true;
+       clearInterval(handleStartGame) 
+     }  
+    }; 
+   
                // NOT WORKING / NOT FINISHED YET
     morphPet() {
         (age === 3)
         (age === 6)
         (age === 9)
     }
-
+*/
 };
+
+
+
+
 
 function handleStartGame(petInstance) { 
         setInterval(function () {
@@ -89,13 +117,10 @@ const pet = new Tamagotchi(petName);
 
 const newDiv = document.createElement(`div`);
 newDiv.setAttribute(`id`, `petInfo`);
-
 document.body.appendChild(newDiv);
+
+
 const startButton = document.getElementById('startGame');
-
-
-
-
 startButton.addEventListener('click',
     function (){
         handleStartGame(pet);
@@ -103,27 +128,21 @@ startButton.addEventListener('click',
     }
 );
 
-const feedButton = document.getElementById
-('feed');
-
+const feedButton = document.getElementById('feed');
 feedButton.addEventListener('click',
     function (){
         pet.handleFeedPet()
     }
 );
 
-const sleepButton = document.getElementById
-('sleep');
-
+const sleepButton = document.getElementById('sleep');
 sleepButton.addEventListener('click',
     function (){
         pet.handleSleepButton()
     }
 );
 
-const petPlayButton = document.getElementById
-('play');
-
+const petPlayButton = document.getElementById('play');
 petPlayButton.addEventListener('click',
     function (){
         pet.handlePetPlayButton()
