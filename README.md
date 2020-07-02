@@ -6,8 +6,7 @@ In this project I am building a game that will function like a Tamagotchi using 
 In this game, the pets needs will increase based on an internal timer. If any of the pets needs (hunger, sleepiness, and boredom)
 reaches "10" on the respective in-game counter, the pet will die. If the pet dies, refresh the browser and start again.
 
-Note: in current version, pet will not die when the threshold is met, and there are numerous other issues. 
-I.E. the backgrounds will not load. This current version displays core functionality, but little else (for now).
+
 
 Button guide:
 "Turn lights off" corresponds with sleep
@@ -20,7 +19,6 @@ The game will decriment the pets needs as they are met respectively.
 Additionally, when the game loads in browser, the player will be prompted to name the pet. Click "Submit" and the pets name will appear in the left hand
 side with the zone denoted "Pet-name".
 
-T
+
 
 In the works: Animations, independant pet need counters,(working) morph and death functions, as well as a restart button. 
-
